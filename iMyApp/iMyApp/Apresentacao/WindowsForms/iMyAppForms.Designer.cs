@@ -1,6 +1,6 @@
 ﻿namespace WindowsForms
 {
-    partial class Form1
+    partial class iMyAppForms
     {
         /// <summary>
         ///  Required designer variable.
