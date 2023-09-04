@@ -1,4 +1,4 @@
-﻿namespace ClasseInfra
+﻿namespace Database
 {
     public class Class1
     {
