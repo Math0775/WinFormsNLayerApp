@@ -1,6 +1,6 @@
 ﻿namespace ClassDataBase
 {
-    public class Class1
+    public class ClassDB
     {
 
     }
