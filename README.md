@@ -1,2 +1,2 @@
 # WinFormsNLayerApp
-Sistemas em Windows Forms usando Arquitetura N Camadas em .Net7
+Sistema em Windows Forms usando Arquitetura N Camadas em .net7

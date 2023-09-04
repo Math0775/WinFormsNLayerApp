@@ -1,8 +1,8 @@
 namespace WindowsForms
 {
-    public partial class Form1 : Form
+    public partial class iMyAppForms : Form
     {
-        public Form1()
+        public iMyAppForms()
         {
             InitializeComponent();
         }
