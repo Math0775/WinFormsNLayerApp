@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Negocio.Comum
+namespace Negocio.Entidades.Comum
 {
-    internal class Pessoa
+    public class Pessoa : EntidadeBase
     {
+        public string Nome { get; set; }
+
+        public string Cpf { get; set; }
     }
 }

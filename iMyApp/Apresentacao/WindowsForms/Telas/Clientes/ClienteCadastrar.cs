@@ -18,6 +18,8 @@ namespace WindowsForms.Telas.Clientes
             InitializeComponent();
 
             var cliente = new Cliente();
+
+            var colabarodor = new Colaborador();
         }
 
     }

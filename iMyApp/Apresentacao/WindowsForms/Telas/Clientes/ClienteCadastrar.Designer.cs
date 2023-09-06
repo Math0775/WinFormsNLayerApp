@@ -42,6 +42,7 @@
             lblBolsaDeEstudos = new Label();
             cmbBolsaDeEstudos = new ComboBox();
             cbClienteResponsavel = new CheckBox();
+            btnSalvar = new Button();
             ((System.ComponentModel.ISupportInitialize)pbFotoDePerfil).BeginInit();
             SuspendLayout();
             // 
@@ -164,11 +165,21 @@
             cbClienteResponsavel.Text = "Cliente é o responsável legal?";
             cbClienteResponsavel.UseVisualStyleBackColor = true;
             // 
+            // btnSalvar
+            // 
+            btnSalvar.Location = new Point(391, 163);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(87, 27);
+            btnSalvar.TabIndex = 16;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = true;
+            // 
             // ClienteCadastrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSalvar);
             Controls.Add(cbClienteResponsavel);
             Controls.Add(cmbBolsaDeEstudos);
             Controls.Add(lblBolsaDeEstudos);
@@ -206,5 +217,6 @@
         private Label lblBolsaDeEstudos;
         private ComboBox cmbBolsaDeEstudos;
         private CheckBox cbClienteResponsavel;
+        private Button btnSalvar;
     }
 }
