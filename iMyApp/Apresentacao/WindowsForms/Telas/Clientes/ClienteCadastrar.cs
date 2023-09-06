@@ -24,9 +24,7 @@ namespace WindowsForms.Telas.Clientes
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
-
-
+            var cliente =
         }
     }
 }

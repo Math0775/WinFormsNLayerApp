@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteCadastrar));
             lblNomeCompleto = new Label();
             lblCPF = new Label();
             lblNascimento = new Label();
-            txtNomeCompleto = new TextBox();
             txtCPF = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             lblTelefone = new Label();
@@ -43,6 +43,7 @@
             cmbBolsaDeEstudos = new ComboBox();
             cbClienteResponsavel = new CheckBox();
             btnSalvar = new Button();
+            maskedTextBox1 = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)pbFotoDePerfil).BeginInit();
             SuspendLayout();
             // 
@@ -72,13 +73,6 @@
             lblNascimento.Size = new Size(114, 15);
             lblNascimento.TabIndex = 2;
             lblNascimento.Text = "Data de Nascimento";
-            // 
-            // txtNomeCompleto
-            // 
-            txtNomeCompleto.Location = new Point(460, 47);
-            txtNomeCompleto.Name = "txtNomeCompleto";
-            txtNomeCompleto.Size = new Size(145, 23);
-            txtNomeCompleto.TabIndex = 3;
             // 
             // txtCPF
             // 
@@ -127,9 +121,9 @@
             // mtbTelefone
             // 
             mtbTelefone.Location = new Point(259, 100);
-            mtbTelefone.Mask = "(99) 000-0000";
+            mtbTelefone.Mask = "(99) 0000-00000";
             mtbTelefone.Name = "mtbTelefone";
-            mtbTelefone.Size = new Size(100, 23);
+            mtbTelefone.Size = new Size(97, 23);
             mtbTelefone.TabIndex = 11;
             // 
             // txtEmail
@@ -176,11 +170,20 @@
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Location = new Point(460, 47);
+            maskedTextBox1.Mask = "000.000.000-00";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(129, 23);
+            maskedTextBox1.TabIndex = 17;
+            // 
             // ClienteCadastrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(maskedTextBox1);
             Controls.Add(btnSalvar);
             Controls.Add(cbClienteResponsavel);
             Controls.Add(cmbBolsaDeEstudos);
@@ -192,10 +195,10 @@
             Controls.Add(lblTelefone);
             Controls.Add(dateTimePicker1);
             Controls.Add(txtCPF);
-            Controls.Add(txtNomeCompleto);
             Controls.Add(lblNascimento);
             Controls.Add(lblCPF);
             Controls.Add(lblNomeCompleto);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ClienteCadastrar";
             Text = "ClienteCadastrar";
             ((System.ComponentModel.ISupportInitialize)pbFotoDePerfil).EndInit();
@@ -208,7 +211,6 @@
         private Label lblNomeCompleto;
         private Label lblCPF;
         private Label lblNascimento;
-        private TextBox txtNomeCompleto;
         private TextBox txtCPF;
         private DateTimePicker dateTimePicker1;
         private Label lblTelefone;
@@ -220,5 +222,6 @@
         private ComboBox cmbBolsaDeEstudos;
         private CheckBox cbClienteResponsavel;
         private Button btnSalvar;
+        private MaskedTextBox maskedTextBox1;
     }
 }
