@@ -127,6 +127,7 @@
             // mtbTelefone
             // 
             mtbTelefone.Location = new Point(259, 100);
+            mtbTelefone.Mask = "(99) 000-0000";
             mtbTelefone.Name = "mtbTelefone";
             mtbTelefone.Size = new Size(100, 23);
             mtbTelefone.TabIndex = 11;
@@ -173,6 +174,7 @@
             btnSalvar.TabIndex = 16;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // ClienteCadastrar
             // 
