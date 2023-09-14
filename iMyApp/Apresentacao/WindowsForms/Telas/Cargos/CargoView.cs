@@ -45,5 +45,13 @@ namespace WindowsForms.Telas.Funcinarios
             }
 
         }
+
+        private void CargoView_Load(object sender, EventArgs e)
+        {
+            var cargoRepositorio = new CargoRepositorio();
+            var dataTable = cargoRepositorio.ObterTodos();
+            gvCargos.DataSource = dataTable;
+
+        }
     }
 }

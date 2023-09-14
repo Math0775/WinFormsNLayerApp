@@ -135,6 +135,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CargoView";
             Text = "CadastroFuncinarios";
+            Load += CargoView_Load;
             gbCargoNovo.ResumeLayout(false);
             gbCargoNovo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gvCargos).EndInit();

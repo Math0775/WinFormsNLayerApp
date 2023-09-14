@@ -22,19 +22,20 @@ namespace Database.Repositorios
 
                 sqlConnection.Open();
 
-                var sql = @"INSERT INTO[dbo].[Cargo]
-                           ([Nome]
+                var sql = @"INSERT INTO [dbo].[Cargo]
+                            ([Nome]
                            ,[Status]
+                           ,[CriadoEm]
                            ,[CriadoPor]
-                           ,[AlteradoEm]
-                           ,[AlteradoPor])
+                           ,[AlteradoPor]
+                           ,[AlteradoEm])
                       VALUES
                            (@nome,
                            @status,
                            @criadoEm,
                            @criadoPor,
-                           @alteradoEm,
-                           @alteradoPor)";
+                           @alteradoPor,
+                           @alteradoEm)";
 
                 using (var connection = new SqlConnection(SqlServer.StrConexao()))
                 {
@@ -43,6 +44,10 @@ namespace Database.Repositorios
                     var cmd = new SqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@nome", cargo.Nome);
                     cmd.Parameters.AddWithValue("@status", cargo.Status);
+                    cmd.Parameters.AddWithValue("@criadoEm", cargo.CriadoEm);
+                    cmd.Parameters.AddWithValue("@criadoPor", cargo.CriadoPor);
+                    cmd.Parameters.AddWithValue("@alteradoPor", cargo.AlteradoPor);
+                    cmd.Parameters.AddWithValue("@AlteradoEm", cargo.AlteradoEm);
                     var resposta = cmd.ExecuteNonQuery();
                     return resposta == 1;
                 }
@@ -102,12 +107,16 @@ namespace Database.Repositorios
             }
         }
 
-        public DataTable ObterTodos(int cargoId) 
+        public DataTable ObterTodos() 
         {
 
             try
             {
-                var sql = @"";
+                var sql = @"SELECT [Id]
+                          ,[Nome]
+                          ,[Status]
+                          ,[AlteradoEm]
+                      FROM [dbo].[Cargo]";
 
                 SqlDataAdapter dataAdapter = null;
                 var dataTable = new DataTable();

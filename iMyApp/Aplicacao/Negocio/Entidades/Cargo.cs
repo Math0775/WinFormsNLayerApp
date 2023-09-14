@@ -19,9 +19,9 @@ namespace Negocio.Entidades
             Status = status;
 
             CriadoEm = DateTime.Now;
-            CriadoPor = "Welton";
+            CriadoPor = "Matheus";
 
-            AlteradoPor = "Welton";
+            AlteradoPor = "Matheus";
             AlteradoEm = DateTime.Now;
         }
     }
