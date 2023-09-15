@@ -105,7 +105,7 @@
             // 
             // gvCargos
             // 
-            gvCargos.AllowUserToAddRows = false;
+            gvCargos.AllowUserToOrderColumns = true;
             gvCargos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gvCargos.Location = new Point(12, 196);
             gvCargos.Name = "gvCargos";
