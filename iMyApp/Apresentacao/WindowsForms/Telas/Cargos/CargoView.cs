@@ -44,6 +44,8 @@ namespace WindowsForms.Telas.Funcinarios
                 MessageBox.Show("Não foi possível implementar o cargo");
             }
 
+            gvCargos.Visible = !gvCargos.Visible;
+
         }
 
         private void CargoView_Load(object sender, EventArgs e)
@@ -52,6 +54,28 @@ namespace WindowsForms.Telas.Funcinarios
             var dataTable = cargoRepositorio.ObterTodos();
             gvCargos.DataSource = dataTable;
 
+        }
+
+        private void gvCargos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                gbCargoNovo.Show();
+                DataGridViewRow row = gvCargos.Rows[e.RowIndex];
+                txtCargo.Text = row.Cells[1].Value.ToString();
+
+
+                object cellValue = row.Cells[2].Value;
+                if (cellValue != null && cellValue != DBNull.Value && !string.IsNullOrWhiteSpace(cellValue.ToString()))
+                {
+                    chkStatus.Checked = Convert.ToBoolean(cellValue);
+                }
+                else
+                {
+                    chkStatus.Checked = false;
+                }
+
+            }
         }
     }
 }

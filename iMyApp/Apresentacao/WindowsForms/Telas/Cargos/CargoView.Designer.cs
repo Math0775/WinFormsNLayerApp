@@ -105,12 +105,14 @@
             // 
             // gvCargos
             // 
+            gvCargos.AllowUserToAddRows = false;
             gvCargos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gvCargos.Location = new Point(12, 196);
             gvCargos.Name = "gvCargos";
             gvCargos.RowTemplate.Height = 25;
             gvCargos.Size = new Size(776, 230);
             gvCargos.TabIndex = 6;
+            gvCargos.CellClick += gvCargos_CellClick;
             // 
             // lblGridView
             // 
